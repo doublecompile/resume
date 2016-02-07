@@ -1,0 +1,26 @@
+{
+    "name": "doublecompile/resume",
+    "type": "library",
+    "description": "A tiny résumé builder",
+    "keywords": ["resume"],
+    "homepage": "http://github.com/doublecompile/resume",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Hawk",
+            "homepage": "https://github.com/doublecompile"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+	"libreworks/microformats": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.6"
+    },
+    "autoload": {
+        "psr-4": {
+          "Doublecompile\\Resume\\": "src/"
+        }
+    }
+}

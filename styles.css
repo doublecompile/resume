@@ -1,0 +1,287 @@
+body
+{
+    font-family: serif;
+    font-size: 16px;
+    line-height: 1.25;
+}
+main
+{
+    min-width: 700px;
+    margin: 2.5em;
+}
+abbr
+{
+    text-decoration: none;
+    border: none;
+}
+h2
+{
+    font-size: 24px;
+    line-height: 39px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-variant: small-caps;
+    color: #369;
+    border-bottom: 1px solid #369;
+}
+h3
+{
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 0;
+    color: #693;
+}
+address, p, ol, ul, dl
+{
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+}
+p, li, dt, dd
+{
+    line-height: 1.25em;
+}
+dt
+{
+    font-weight: bold;
+}
+dd
+{
+    margin-left: 1.25em;
+}
+ul
+{
+    padding-left: 0;
+}
+ol
+{
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+ol li
+{
+    margin: 0;
+    padding: 0;
+    line-height: 1.25em;
+    font-size: 16px;
+}
+ol li ul li
+{
+    margin-left: 1.25em;
+}
+ol li h3
+{
+    margin-top: 0;
+    padding-top: 0;
+}
+ul ul {
+    margin-bottom: 0;
+}
+table
+{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+table td, table th
+{
+    padding: 0;
+    line-height: 20px;
+    padding: 0 10px 0 0;
+    text-align: left;
+}
+table thead th
+{
+    font-size: 12px;
+    line-height: 20px;
+}
+table th[colspan]
+{
+    text-align: center;
+    border-bottom: none;
+}
+dd p, dd table
+{
+    margin: 0;
+}
+table th:last-child, table td:last-child
+{
+    padding-right: 0;
+}
+
+.golden-columns:before,
+.golden-columns:after {
+    content: " ";
+    display: table;
+}
+.golden-columns:after {
+    clear: both;
+}
+.golden-columns {
+    *zoom: 1;
+}
+.golden-columns .column {
+    float: left;
+    width: 38.197%;
+}
+.golden-columns .column > * {
+    margin-left: 1.25em;
+    margin-right: 1.25em;
+}
+.golden-columns .column:last-child {
+    width: 61.803%;
+}
+.golden-columns .column:first-child > * {
+    margin-left: 0;
+}
+.golden-columns .column:last-child > * {
+    margin-right: 0;
+}
+
+#skills dl
+{
+    margin-top: 0;
+}
+.p-skill a
+{
+    color: #000;
+    text-decoration: none;
+}
+.p-skill th
+{
+    font-weight: normal;
+}
+
+#education, #volunteering {
+    margin-top: 2.5em;
+}
+
+.p-contact
+{
+    zoom: 100%;
+    text-align: right;
+}
+.p-contact
+{
+    height: 40px;
+}
+.p-contact:after
+{
+    content: ".";
+    height: 0;
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+.p-contact h1
+{
+    display: block;
+    font-size: 40px;
+    line-height: 1;
+    font-style: normal;
+    float: left;
+    padding-right: 0.5em;
+    margin: 0;
+}
+.p-contact .avatar-container
+{
+    float: left;
+    margin-right: 1.25em;
+}
+.p-contact .u-photo
+{
+    width: 40px;
+    height: 40px;
+}
+.p-contact .p-adr, .p-contact .p-tel, .p-contact .url-container
+{
+    display: inline-block;
+}
+.p-contact .p-tel
+{
+    display: none;
+}
+.p-contact .p-adr:before, .p-contact .p-tel:before, .p-contact .url-container:before
+{
+    content: " ∙ ";
+}
+.p-locality::after
+{
+    content: ", ";
+}
+
+.skill-note
+{
+    font-size: 12px;
+    font-style: italic;
+    padding-left: 20px;
+}
+.skill-level
+{
+    font-size: 12px;
+}
+
+.p-experience h3,
+.p-education h3
+{
+    float: left;
+}
+.p-experience .p-job-title
+{
+    margin: 0;
+    font-weight: bold;
+    color: #c60;
+    float: left;
+    clear: left;
+}
+.p-experience .p-adr:before,
+.p-experience .url-container:before,
+.p-education .p-adr:before
+{
+    content: "∙ ";
+}
+.p-experience .p-adr,
+.p-experience .url-container,
+.p-education .p-adr
+{
+    float: left;
+    margin: 0;
+    padding-left: 0.625em;
+}
+.p-experience .url-container a,
+.p-experience .p-adr > span,
+.p-education .p-adr > span
+{
+    font-size: 12px;    
+}
+
+.p-experience .date-range,
+.p-education .date-range
+{
+    float: right;
+    color: #369;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0 0 20px 0;
+    font-style: italic;
+}
+.p-experience .p-description,
+.p-education .p-description
+{
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    clear: both;
+}
+.p-education .p-description > *,
+.p-experience .p-description > *
+{
+    margin-bottom: 0;
+}
+.p-description ul
+{
+    margin-top: 0;
+}
+
+.hidden
+{
+    display: none !important;
+}
