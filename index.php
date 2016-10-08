@@ -27,11 +27,11 @@ $experience = [
         ->address('Glen Burnie', 'MD', 'US')
         ->dates('2000-01-01', $present)
         ->description(
-            "Production of design comps and front-end website development using HTML, CSS, and JavaScript. Development of PHP web applications interfacing with MongoDB, PostgreSQL, or MySQL. Drupal CMS and MediaWiki configuration and customization. Since May 2007, server administration of an Ubuntu hosting platform with e-mail services for clients. Since March 2011, experience working with Amazon EC2, ECS, S3, KMS, ElastiCache, Route 53, and VPC."            
+            "Production of design comps and front-end website development using HTML, CSS, and JavaScript. Development of PHP web applications interfacing with MongoDB, PostgreSQL, or MySQL. Drupal CMS and MediaWiki configuration and customization. Since May 2007, server administration of an Ubuntu hosting platform with e-mail services for clients. Since March 2011, experience working with Amazon EC2, ECS, S3, KMS, ElastiCache, Route 53, and VPC."
         )->build()
     ,
     JobBuilder::get()->company('Quevera')
-        ->title('Technical Lead / Sr. Software Engineer')
+        ->title('Principal Software Architect')
         ->address('Columbia', 'MD', 'US')
         ->dates('2015-05-01', $present)
         ->description(
@@ -43,6 +43,7 @@ $experience = [
             "* Designed and configured AWS infrastructure; EC2 Linux servers and ECS containers; Integrated with Amazon S3, KMS, SES, ElastiCache.",
             "* Created Docker container images",
             "* Configured and administered revision control using Git. Maintained SCM systems.",
+            "* Supervised development team. Crafted requirements and distributed workload.",
             "Serves as a web developer and systems designer for various clients.",
             "* Front-end web development using HTML, CSS, and JavaScript.",
             "* Installed, configured, and maintained Drupal and Joomla! CMS products."
@@ -249,7 +250,7 @@ $skills = [
             ,
             SkillBuilder::get()->name('Bash', 'https://en.wikipedia.org/wiki/Bash_(Unix_shell)')
                 ->rating(1)
-                ->dates('2014-09-21', '2015-09-21')
+                ->dates('2014-09-21', '2016-09-21')
                 ->build()
             ,
             SkillBuilder::get()->name('SQL', 'https://en.wikipedia.org/wiki/Structured_Query_Language')
@@ -261,7 +262,7 @@ $skills = [
                 ->rating(3)
                 ->dates('2000-01-01', $present)
                 ->build()
-            
+
         ]
     ),
     new SkillHeading(
@@ -322,6 +323,7 @@ $skills = [
         'Development\\Unit Testing',
         [
             new Skill(new Tag("http://en.wikipedia.org/wiki/PHPUnit", 'PHPUnit')),
+            new Skill(new Tag("https://github.com/HackPack/HackUnit", 'HackUnit')),
             new Skill(new Tag("http://en.wikipedia.org/wiki/JUnit", 'JUnit'))
         ]
     ),
@@ -375,7 +377,7 @@ $skills = [
             // new DateTime('2011-03-18')
             new Skill('EC2'), new Skill('ECS'), new Skill('S3'), new Skill('RDS'),
             new Skill('ElastiCache'), new Skill('VPC'), new Skill('Route 53'),
-            new Skill('KMS'), new Skill('SES')
+            new Skill('KMS'), new Skill('SES'), new Skill('CodeDeploy'),
         ]
     ),
     new SkillHeading(
@@ -465,7 +467,7 @@ $cw = new Doublecompile\Resume\CardWriter();
 			<address class="p-contact h-card">
                 <?= $cw->write($resume->getContact()) ?>
 			</address>
- 
+
             <div class="p-summary">
                 <!-- Experience with:
 				graphic design and web design since 1997,
@@ -513,7 +515,7 @@ $cw = new Doublecompile\Resume\CardWriter();
                                     <?= $skillListWriter->write($sh->getSkills()) ?>
                                 </dd>
                                 <?php endif; ?>
-                                <?php endforeach; ?>                                
+                                <?php endforeach; ?>
 
 							</dl>
 						</div>
@@ -528,9 +530,9 @@ $cw = new Doublecompile\Resume\CardWriter();
                                     <?= $skillListWriter->write($sh->getSkills()) ?>
                                 </dd>
                                 <?php endif; ?>
-                                <?php endforeach; ?>                                
+                                <?php endforeach; ?>
 							</dl>
-						</div>	
+						</div>
 					</section>
 
 					<!-- ?education=1 to see education -->
@@ -546,7 +548,7 @@ $cw = new Doublecompile\Resume\CardWriter();
 						</ol>
 					</section>
 					<?php endif; ?>
-	
+
 					<section id="volunteering">
 						<h2>Open Source Contributions</h2>
 						<ol>
@@ -569,7 +571,7 @@ $cw = new Doublecompile\Resume\CardWriter();
                                 <?=$eventWriter->write($exp)?>
                             </li>
                             <?php endforeach; ?>
-						</ol>	
+						</ol>
 					</section>
 
 				</div>
