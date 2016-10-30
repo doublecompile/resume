@@ -7,6 +7,8 @@
  */
 namespace Doublecompile\Resume;
 
+use League\Period\Period;
+
 /**
  * Writes an event.
  *
@@ -21,7 +23,7 @@ class JobBuilder
     private $url;
     private $dates;
     private $description;
-    
+
     /**
      * Gets a new Builder.
      *
@@ -31,7 +33,7 @@ class JobBuilder
     {
         return new self();
     }
-    
+
     /**
      * Adds the company name.
      *
@@ -43,7 +45,7 @@ class JobBuilder
         $this->name = $name;
         return $this;
     }
-    
+
     /**
      * Adds the job title.
      *
@@ -55,7 +57,7 @@ class JobBuilder
         $this->title = $title;
         return $this;
     }
-    
+
     /**
      * Adds the URL.
      *
@@ -81,7 +83,7 @@ class JobBuilder
         $this->adr = new \Libreworks\Microformats\Address(null, null, null, $locality, $region, null, $country);
         return $this;
     }
-    
+
     /**
      * Adds the dates.
      *
@@ -91,10 +93,10 @@ class JobBuilder
      */
     public function dates($from, $to)
     {
-        $this->dates = new \Libreworks\Microformats\DateRange($this->toDate($from), $this->toDate($to));
+        $this->dates = new Period($this->toDate($from), $this->toDate($to));
         return $this;
     }
-    
+
     /**
      * @return $this provides a fluent interface
      */
@@ -134,7 +136,7 @@ class JobBuilder
             new \Libreworks\Microformats\Card($cardProps)
         );
     }
-    
+
     /**
      * @param \DateTimeInterface $a
      * @return \DateTimeInterface

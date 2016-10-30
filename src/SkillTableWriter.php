@@ -41,26 +41,26 @@ class SkillTableWriter
         return '<table><thead><tr><th scope="col">Name</th><th scope="col">Level</th><th scope="col">Years</th></tr></thead><tbody>'
             . implode("\n", $out) . "</tbody></table>";
     }
-    
+
     /**
      * Gets the max date.
      *
-     * @param \Libreworks\Microformats\DateRange[] $dates The dates
+     * @param \League\Period\Period[] $dates The dates
      * @return \DateTimeImmutable The max date or null
      */
     protected function getMax(array $dates)
     {
         $max = null;
         foreach ($dates as $dr) {
-            $max = max($dr->getTo(), $max);
+            $max = max($dr->getEndDate(), $max);
         }
         return $max;
     }
-    
+
     /**
      * Gets the total years of date ranges.
      *
-     * @param \Libreworks\Microformats\DateRange[] $dates The date ranges
+     * @param \League\Period\Period[] $dates The date ranges
      * @return string The formatted date interval
      */
     protected function getTotal(array $dates)
@@ -68,7 +68,7 @@ class SkillTableWriter
         if (count($dates) == 0) {
             return '0';
         } elseif (count($dates) == 1) {
-            $di = $dates[0]->getInterval();
+            $di = $dates[0]->getDateInterval();
             if ($di->y < 1) {
                 return number_format($di->m / 12, 1);
             } else {
@@ -78,7 +78,7 @@ class SkillTableWriter
             $months = 0;
             $days = 0;
             foreach ($dates as $daterange) {
-                $v = $daterange->getInterval();
+                $v = $daterange->getDateInterval();
                 $months += (($v->y * 12) + $v->m);
                 $days += $v->d;
             }
@@ -89,7 +89,7 @@ class SkillTableWriter
             return $months < 1 ? number_format($months / 12, 1) : round($months / 12);
         }
     }
-    
+
     /**
      * Gets the text level.
      *

@@ -1,9 +1,9 @@
 <?php
 require "vendor/autoload.php";
 
+use League\Period\Period;
 use Libreworks\Microformats\Address;
 use Libreworks\Microformats\Card;
-use Libreworks\Microformats\DateRange;
 use Libreworks\Microformats\Skill;
 use Libreworks\Microformats\SkillHeading;
 use Libreworks\Microformats\Tag;
@@ -342,16 +342,16 @@ $skills = [
         'Databases\\Relational',
         [
             new Skill(new Tag("http://en.wikipedia.org/wiki/PostgreSQL", 'PostgreSQL'), 2, [
-                new DateRange(new \DateTime('2001-01-01'), new \DateTime('2001-07-01')),
-                new DateRange(new \DateTime('2008-01-01'), $present)
+                new Period(new \DateTime('2001-01-01'), new \DateTime('2001-07-01')),
+                new Period(new \DateTime('2008-01-01'), $present)
             ]),
             new Skill(new Tag("http://en.wikipedia.org/wiki/MySQL", 'MySQL'), 2, [
-                new DateRange(new \DateTime('2001-01-01'), new \DateTime('2008-01-01'))
+                new Period(new \DateTime('2001-01-01'), new \DateTime('2008-01-01'))
             ]),
             new Skill(new Tag('http://en.wikipedia.org/wiki/Microsoft SQL Server', 'Microsoft SQL Server'), 2, [
-                new DateRange(new \DateTime('2001-01-01'), new \DateTime('2001-07-01')),
-                new DateRange(new \DateTime('2005-05-01'), new \DateTime('2007-12-31')),
-                new DateRange(new \DateTime('2008-08-01'), new \DateTime('2011-08-01'))
+                new Period(new \DateTime('2001-01-01'), new \DateTime('2001-07-01')),
+                new Period(new \DateTime('2005-05-01'), new \DateTime('2007-12-31')),
+                new Period(new \DateTime('2008-08-01'), new \DateTime('2011-08-01'))
             ]),
             new Skill(new Tag("http://en.wikipedia.org/wiki/Oracle Database", 'Oracle Database')),
             new Skill(new Tag("http://en.wikipedia.org/wiki/IBM DB2", 'IBM DB2')),

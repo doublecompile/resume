@@ -7,6 +7,8 @@
  */
 namespace Doublecompile\Resume;
 
+use League\Period\Period;
+
 /**
  * Writes an event.
  *
@@ -19,7 +21,7 @@ class SkillBuilder
     private $url;
     private $rating;
     private $dates = [];
-    
+
     /**
      * Gets a new builder.
      *
@@ -29,7 +31,7 @@ class SkillBuilder
     {
         return new self();
     }
-    
+
     /**
      * Adds a name (and optionally URL).
      *
@@ -43,7 +45,7 @@ class SkillBuilder
         $this->url = $url;
         return $this;
     }
-    
+
     /**
      * Adds a rating.
      *
@@ -55,7 +57,7 @@ class SkillBuilder
         $this->rating = (int)$rating;
         return $this;
     }
-    
+
     /**
      * Adds a set of dates. You can call this method multiple times.
      *
@@ -65,10 +67,10 @@ class SkillBuilder
      */
     public function dates($from, $to)
     {
-        $this->dates[] = new \Libreworks\Microformats\DateRange($this->toDate($from), $this->toDate($to));
+        $this->dates[] = new Period($this->toDate($from), $this->toDate($to));
         return $this;
     }
-    
+
     /**
      * Builds the skill.
      *
@@ -84,7 +86,7 @@ class SkillBuilder
             $this->dates
         );
     }
-    
+
     /**
      * @param \DateTimeInterface $a
      * @return \DateTimeInterface

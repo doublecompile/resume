@@ -7,6 +7,9 @@
  */
 namespace Doublecompile\Resume;
 
+use Libreworks\Microformats\AddressFormatter;
+use \Libreworks\Microformats\NameFormatter;
+
 /**
  * Writes Cards.
  *
@@ -35,7 +38,7 @@ class CardWriter
         ];
         return '<div>' . implode("\n", $out) . '</div>';
     }
-    
+
     /**
      * Writes a name.
      *
@@ -44,20 +47,7 @@ class CardWriter
      */
     protected function writeName(\Libreworks\Microformats\Name $name)
     {
-        $names = [
-            'p-honorific-prefix' => $name->getPrefix(),
-            'p-given-name' => $name->getGiven(),
-            'p-additional-name' => $name->getMiddle(),
-            'p-family-name' => $name->getSurname(),
-            'p-honorific-suffix' => $name->getSuffix()
-        ];
-        $tags = [];
-        foreach ($names as $k => $v) {
-            if (strlen($v) > 0) {
-                $tags[] = '<span class="' . $k . '">' . htmlspecialchars($v) . '</span>';
-            }
-        }
-        return '<span class="p-name">' . implode(' ', $tags) . '</span>';
+        return (new NameFormatter())->format($name);
     }
 
     /**
@@ -68,6 +58,6 @@ class CardWriter
      */
     public function writeAddress(\Libreworks\Microformats\Address $address)
     {
-        return (new AddressWriter())->write($address);
+        return (new AddressFormatter())->format($address);
     }
 }

@@ -23,7 +23,7 @@ class EventWriter
      * @var \Doublecompile\Resume\AddressWriter
      */
     private $addressWriter;
-    
+
     /**
      * Creates a new EventWriter.
      *
@@ -32,7 +32,7 @@ class EventWriter
     public function __construct(\DateTimeInterface $present = null)
     {
         $this->present = $present;
-        $this->addressWriter = new AddressWriter();
+        $this->addressWriter = new \Libreworks\Microformats\AddressFormatter();
     }
 
     /**
@@ -50,12 +50,12 @@ class EventWriter
             '<div class="p-location h-card">' . $this->writeCard($card) . '</div>'
         ];
         if ($dates !== null) {
-            $out[] = '<p class="date-range"><time class="dt-start" datetime="' . $dates->getFrom()->format('Y-m-d') . '">' . $dates->getFrom()->format('M Y') . '</time>–<time class="dt-end" datetime="' . $dates->getTo()->format('Y-m-d') . '">' . ($dates->getTo() === $this->present ? 'Present' : $dates->getTo()->format('M Y')) . '</time></p>';
+            $out[] = '<p class="date-range"><time class="dt-start" datetime="' . $dates->getStartDate()->format('Y-m-d') . '">' . $dates->getStartDate()->format('M Y') . '</time>–<time class="dt-end" datetime="' . $dates->getEndDate()->format('Y-m-d') . '">' . ($dates->getEndDate() === $this->present ? 'Present' : $dates->getEndDate()->format('M Y')) . '</time></p>';
         }
         $out[] = '<div class="p-description">' . $this->formatText($event->getDescription()) . '</div>';
         return '<div>' . implode("\n", $out) . '</div>';
     }
-    
+
     /**
      * Converts text to P tags and UL tags.
      *
@@ -87,7 +87,7 @@ class EventWriter
         }
         return implode("\n", $out);
     }
-    
+
     /**
      * Writes a Card.
      *
@@ -101,7 +101,7 @@ class EventWriter
         ];
         $address = $card->getAddress();
         if ($address !== null) {
-            $out[] = '<p class="p-adr h-adr">' . $this->addressWriter->write($card->getAddress()) . '</p>';
+            $out[] = '<p class="p-adr h-adr">' . $this->addressWriter->format($card->getAddress()) . '</p>';
         }
         $url = $card->getUrl();
         if ($url !== null) {
