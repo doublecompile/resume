@@ -27,7 +27,7 @@ $experience = [
         ->address('Glen Burnie', 'MD', 'US')
         ->dates('2000-01-01', $present)
         ->description(
-            "Production of design comps and front-end website development using HTML, CSS, and JavaScript. Development of PHP web applications interfacing with MongoDB, PostgreSQL, or MySQL. Drupal CMS and MediaWiki configuration and customization. Since May 2007, server administration of an Ubuntu hosting platform with e-mail services for clients. Since March 2011, experience working with Amazon EC2, ECS, S3, KMS, ElastiCache, Route 53, and VPC."
+            "Production of design comps and front-end website development using HTML, CSS, and JavaScript. Development of PHP web applications interfacing with MongoDB, PostgreSQL, or MySQL. Drupal CMS and MediaWiki configuration and customization. Mobile-first responsive design and testing on smartphone and tablet devices. Since May 2007, server administration of an Ubuntu hosting platform with e-mail services for clients. Since March 2011, experience working with Amazon EC2, ECS, S3, KMS, ElastiCache, Route 53, and VPC."
         )->build()
     ,
     JobBuilder::get()->company('Quevera')
@@ -37,15 +37,16 @@ $experience = [
         ->description(
             "Makes or influences company technical decisions based on knowledge and experience.",
             "Serves as a software engineer, systems designer, database administrator, software configuration manager, and system administrator of a Software-as-a-Service product.",
-            "* Design and development of PHP/Hack web application product using HHVM and XHP.",
-            "* Front-end web development using HTML, CSS, and Dojo Toolkit JavaScript framework.",
+            "* Design and development of PHP/Hack web application product using HHVM and XHP. Design and development of REST API.",
+            "* Front-end web development using HTML, CSS, and Dojo Toolkit. Implementation and testing of mobile-first responsive design using smartphone, tablet, and desktop devices.",
             "* MongoDB administration.",
-            "* Designed and configured AWS infrastructure; EC2 Linux servers and ECS containers; Integrated with Amazon S3, KMS, SES, ElastiCache.",
+            "* Designed and configured Amazon Web Services infrastructure; EC2 Linux servers and ECS containers; Integrated with S3, KMS, SES, ElastiCache. Leveraged CodeDeploy in production and staging delivery systems.",
             "* Created Docker container images",
+            "* Creation and maintenance of open source projects. Contribution to external projects.",
             "* Configured and administered revision control using Git. Maintained SCM systems.",
             "* Supervised development team. Crafted requirements and distributed workload.",
             "Serves as a web developer and systems designer for various clients.",
-            "* Front-end web development using HTML, CSS, and JavaScript.",
+            "* Front-end web development using HTML, CSS, and JavaScript. Implementation and testing of mobile-first responsive design using smartphone, tablet, and desktop devices.",
             "* Installed, configured, and maintained Drupal and Joomla! CMS products."
         )->build()
     ,
@@ -56,15 +57,16 @@ $experience = [
         ->description(
             "Made or influenced company technical decisions based on knowledge and experience. Served as system administrator for the company's production servers. Provided front-end web development for corporate website. Assisted in graphic design and database administration.",
             "Served on contract as a software engineer, systems designer, software configuration manager, and system administrator for 3 years. Helped lead a team of other developers.",
-            "* Design and development of Java/Groovy web applications and libraries using Grails, Spring Framework, Hibernate, and Apache Maven. Designed and implemented custom complex authorization and authentication rules.",
-            "* Front-end web development using HTML, CSS, and Dojo Toolkit JavaScript framework.",
+            "* Design and development of Java/Groovy web applications and libraries using Grails, Spring Framework, Hibernate, and Apache Maven. Designed and implemented custom complex authorization and authentication rules. Design and development of REST API.",
+            "* Front-end web development using HTML, CSS, and Dojo Toolkit.",
             "* Oracle Database Server schema design.",
             "* Configured UNIX application servers; administration of Apache HTTP Server and Apache Tomcat; performed application deployments.",
             "* Configured and administered revision control using Git. Maintained SCM systems and created guidelines for developer workspace setup.",
             "* Administered Jenkins for continuous integration builds.",
             "Served on a contract as a software engineer, systems designer, database administrator, software configuration manager, and system administrator for 3 years. Led a team of other developers.",
             "* Design and development of Java EE web applications and libraries using Spring Framework, Hibernate, Apache Tiles, JasperReports, and Apache Maven. Designed and implemented custom complex authorization and authentication rules.",
-            "* Graphic design/user interface design. Front-end web development using HTML, CSS, and Dojo Toolkit JavaScript framework.",
+            "* Design and development of REST API.",
+            "* Graphic design/user interface design. Front-end web development using HTML, CSS, and Dojo Toolkit.",
             "* Microsoft SQL Server database schema design and maintenance.",
             "* Configured Windows application and database servers; administration of Apache HTTP Server and Apache Tomcat; performed application deployments.",
             "* Configured and administered revision control using Subversion. Maintained SCM systems and created guidelines for developer workspace setup.",
@@ -160,14 +162,6 @@ $volunteering = [
             "Created and maintained a Java library for use with Spring Framework applications. Used JUnit, Maven."
         )->build()
     ,
-    JobBuilder::get()->company('Grails Dojo Plugin')
-        ->title('Contributor')
-        ->url('https://github.com/doublecompile/grails-dojo')
-        ->dates('2013-05-28', '2013-12-26')
-        ->description(
-            "Performed extensive maintenance for Grails Dojo plugin. Used JUnit."
-        )->build()
-    ,
     JobBuilder::get()->company('Xyster Framework')
         ->title('Project Leader')
         ->url('https://github.com/libreworks/xyster')
@@ -237,11 +231,6 @@ $skills = [
                 ->dates('2011-10-31', '2014-12-02')
                 ->build()
             ,
-            SkillBuilder::get()->name('ASP.NET / C#', 'https://en.wikipedia.org/wiki/C%20Sharp%20(programming%20language)')
-                ->rating(2)
-                ->dates('2004-01-01', '2006-01-01')
-                ->build()
-            ,
             SkillBuilder::get()->name('Perl', 'https://en.wikipedia.org/wiki/Perl')
                 ->rating(1)
                 ->dates('1999-09-01', '2000-02-02')
@@ -262,25 +251,30 @@ $skills = [
                 ->rating(3)
                 ->dates('2000-01-01', $present)
                 ->build()
-
+            ,
+            SkillBuilder::get()->name('ASP.NET / C#', 'https://en.wikipedia.org/wiki/C%20Sharp%20(programming%20language)')
+                ->rating(2)
+                ->dates('2004-01-01', '2006-01-01')
+                ->build()
+            ,
         ]
     ),
     new SkillHeading(
         'Development\\Frameworks / Platforms',
         [
-            new Skill(new Tag('http://en.wikipedia.org/wiki/Spring Framework', 'Spring Framework')),
-            new Skill(new Tag('http://en.wikipedia.org/wiki/Hibernate (Java)', 'Hibernate')),
+            new Skill(new Tag('http://en.wikipedia.org/wiki/Dojo_Toolkit', 'Dojo Toolkit')),
+            new Skill(new Tag('http://en.wikipedia.org/wiki/Spring_Framework', 'Spring Framework')),
+            new Skill(new Tag('http://en.wikipedia.org/wiki/Hibernate_(Java)', 'Hibernate')),
             new Skill(new Tag('http://en.wikipedia.org/wiki/Grails', 'Grails')),
-            new Skill(new Tag('http://en.wikipedia.org/wiki/Zend Framework', 'Zend Framework')),
+            new Skill(new Tag('http://en.wikipedia.org/wiki/Zend_Framework', 'Zend Framework')),
             new Skill(new Tag('http://en.wikipedia.org/wiki/Symfony', 'Symfony 2')),
-            new Skill(new Tag('http://en.wikipedia.org/wiki/Dojo Toolkit', 'Dojo Toolkit')),
             new Skill(new Tag('http://en.wikipedia.org/wiki/Drupal', 'Drupal')),
         ]
     ),
     new SkillHeading(
         'Development\\Markup Languages / Other Standards',
         [
-            SkillBuilder::get()->name('HTML (XHTML, HTML5)', 'http://en.wikipedia.org/wiki/(X)HTML')
+            SkillBuilder::get()->name('HTML (XHTML, HTML5)', 'http://en.wikipedia.org/wiki/HTML')
                 ->rating(4)
                 ->dates('1997-09-01', $present)
                 ->build()
@@ -305,7 +299,7 @@ $skills = [
                 ->dates('2011-10-31', $present)
                 ->build()
             ,
-            SkillBuilder::get()->name('REST', 'http://en.wikipedia.org/wiki/Representational State Transfer')
+            SkillBuilder::get()->name('REST', 'http://en.wikipedia.org/wiki/Representational_State_Transfer')
                 ->rating(3)
                 ->dates('2009-02-01', $present)
                 ->build()
@@ -314,8 +308,8 @@ $skills = [
     new SkillHeading(
         'Development\\Revision Control',
         [
-            new Skill(new Tag('http://en.wikipedia.org/wiki/Git (software)', 'Git')),
-            new Skill(new Tag('http://en.wikipedia.org/wiki/Apache Subversion', 'Subversion')),
+            new Skill(new Tag('http://en.wikipedia.org/wiki/Git_(software)', 'Git')),
+            new Skill(new Tag('http://en.wikipedia.org/wiki/Apache_Subversion', 'Subversion')),
             new Skill(new Tag('http://en.wikipedia.org/wiki/Concurrent_Versions_System', 'CVS')),
         ]
     ),
@@ -330,12 +324,12 @@ $skills = [
     new SkillHeading(
         'Development\\Build Tools',
         [
-            new Skill(new Tag("http://en.wikipedia.org/wiki/Jenkins_%28software%29", 'Jenkins')),
             new Skill(new Tag("https://en.wikipedia.org/wiki/Composer_%28software%29", 'Composer')),
-            new Skill(new Tag("http://en.wikipedia.org/wiki/Phing", 'Phing')),
-            new Skill(new Tag("http://en.wikipedia.org/wiki/Apache Ant", 'Ant')),
+            new Skill(new Tag("https://en.wikipedia.org/wiki/Broccoli_%28build_tool%29", 'Broccoli')),
+            new Skill(new Tag("http://en.wikipedia.org/wiki/Jenkins_%28software%29", 'Jenkins')),
             new Skill(new Tag("http://en.wikipedia.org/wiki/Apache Maven", 'Maven')),
-            new Skill(new Tag("https://en.wikipedia.org/wiki/Broccoli_%28build_tool%29", 'Broccoli'))
+            new Skill(new Tag("http://en.wikipedia.org/wiki/Apache Ant", 'Ant')),
+            new Skill(new Tag("http://en.wikipedia.org/wiki/Phing", 'Phing')),
         ]
     ),
     new SkillHeading(
@@ -430,7 +424,7 @@ $skills = [
 
 $resume = new Libreworks\Microformats\Resume(
     "Jonathan D. Hawk",
-    "A fast learner and strong leader. Excellent communication and customer support skills. Impassioned about standards compliance, web accessibility, software development, and free and open source software. Types 95–105 WPM on the dvorak keyboard layout.",
+    "Principal Software Architect and DevOps engineer. A fast learner and strong leader. Excellent communication and customer support skills. Impassioned about standards compliance, web accessibility, software development, and free and open source software. Types 95–105 WPM on the dvorak keyboard layout.",
     $card,
     $education,
     $experience,
