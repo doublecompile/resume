@@ -422,9 +422,14 @@ $skills = [
     )
 ];
 
+$di = $present->diff(new \DateTime('1999-09-01'));
+$devYears = $di->y + ($di->m > 6 ? 1 : 0);
+$di = $present->diff(new \DateTime('1997-09-01'));
+$webYears = $di->y + ($di->m > 6 ? 1 : 0);
+
 $resume = new Libreworks\Microformats\Resume(
     "Jonathan D. Hawk",
-    "Principal Software Architect and DevOps engineer. A fast learner and strong leader. Excellent communication and customer support skills. Impassioned about standards compliance, web accessibility, software development, and free and open source software. Types 95–105 WPM on the dvorak keyboard layout.",
+    "Principal Software Architect and DevOps engineer. $devYears years experience in software development. $webYears years experience in web design and development. A fast learner and strong leader. Excellent communication and customer support skills. Impassioned about standards compliance, web accessibility, software development, and free and open source software. Types 95–105 WPM on the dvorak keyboard layout.",
     $card,
     $education,
     $experience,
