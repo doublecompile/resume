@@ -27,16 +27,32 @@ $experience = [
         ->address('Glen Burnie', 'MD', 'US')
         ->dates('2000-01-01', $present)
         ->description(
-            "Production of design comps and front-end website development using HTML, CSS, and JavaScript. Development of PHP web applications interfacing with MongoDB, PostgreSQL, or MySQL. Drupal CMS and MediaWiki configuration and customization. Mobile-first responsive design and testing on smartphone and tablet devices. Since May 2007, server administration of an Ubuntu hosting platform with e-mail services for clients. Since March 2011, experience working with Amazon EC2, ECS, S3, KMS, ElastiCache, Route 53, and VPC."
+            "Production of design comps and front-end website development using HTML, CSS, and JavaScript. Development of PHP web applications interfacing with MongoDB, PostgreSQL, or MySQL. Drupal, WordPress, and MediaWiki configuration and customization. Mobile-first responsive design and testing on smartphone and tablet devices. Since May 2007, server administration of an Ubuntu hosting platform with e-mail services for clients. Since March 2011, experience working with Amazon EC2, ECS, S3, KMS, ElastiCache, Route 53, and VPC."
+        )->build()
+    ,
+    JobBuilder::get()->company('Mindgrub Technologies')
+        ->title('Lead Managed Services Engineer')
+        ->address('Baltimore', 'MD', 'US')
+        ->dates('2017-04-17', $present)
+        ->description(
+            "Influences company policy and processes based on knowledge and experience.",
+            "Serves as a DevOps engineer.",
+            "* Front-end web development using HTML, CSS, and JavaScript. Implementation and testing of mobile-first responsive design using smartphone, tablet, and desktop devices.",
+            "* Installed, configured, and maintained Drupal and WordPress CMS products.",
+            "* Custom Drupal module development.",
+            "* Created Docker container images.",
+            "* Leveraged Kubernetes and Amazon ECS for container orchestration.",
+            "* Design and configuration of Amazon Web Services infrastructure; EC2 Linux servers; Integrated with S3, RDS, SES, ElastiCache.",
+            "* Design and development of web applications and automated scripts using PHP and Bash."
         )->build()
     ,
     JobBuilder::get()->company('Quevera')
         ->title('Principal Software Architect')
         ->address('Columbia', 'MD', 'US')
-        ->dates('2015-05-01', $present)
+        ->dates('2015-05-01', '2017-04-12')
         ->description(
-            "Makes or influences company technical decisions based on knowledge and experience.",
-            "Serves as a software engineer, systems designer, database administrator, software configuration manager, and system administrator of a Software-as-a-Service product.",
+            "Made or influenced company technical decisions based on knowledge and experience.",
+            "Served as a software engineer, systems designer, database administrator, software configuration manager, and system administrator of a Software-as-a-Service product.",
             "* Design and development of PHP/Hack web application product using HHVM and XHP. Design and development of REST API.",
             "* Front-end web development using HTML, CSS, and Dojo Toolkit. Implementation and testing of mobile-first responsive design using smartphone, tablet, and desktop devices.",
             "* MongoDB administration.",
@@ -45,7 +61,7 @@ $experience = [
             "* Creation and maintenance of open source projects. Contribution to external projects.",
             "* Configured and administered revision control using Git. Maintained SCM systems.",
             "* Supervised development team. Crafted requirements and distributed workload.",
-            "Serves as a web developer and systems designer for various clients.",
+            "Served as a web developer and systems designer for various clients.",
             "* Front-end web development using HTML, CSS, and JavaScript. Implementation and testing of mobile-first responsive design using smartphone, tablet, and desktop devices.",
             "* Installed, configured, and maintained Drupal and Joomla! CMS products."
         )->build()
@@ -211,7 +227,7 @@ $skills = [
             ,
             SkillBuilder::get()->name('Hack', 'https://en.wikipedia.org/wiki/Hack_%28programming_language%29')
                 ->rating(3)
-                ->dates('2015-05-01', $present)
+                ->dates('2015-05-01', '2017-02-28')
                 ->build()
             ,
             SkillBuilder::get()->name('JavaScript / DOM', 'https://en.wikipedia.org/wiki/JavaScript')
@@ -240,6 +256,7 @@ $skills = [
             SkillBuilder::get()->name('Bash', 'https://en.wikipedia.org/wiki/Bash_(Unix_shell)')
                 ->rating(1)
                 ->dates('2014-09-21', '2016-09-21')
+                ->dates('2017-04-17', $present)
                 ->build()
             ,
             SkillBuilder::get()->name('SQL', 'https://en.wikipedia.org/wiki/Structured_Query_Language')
@@ -267,7 +284,7 @@ $skills = [
             new Skill(new Tag('http://en.wikipedia.org/wiki/Hibernate_(Java)', 'Hibernate')),
             new Skill(new Tag('http://en.wikipedia.org/wiki/Grails', 'Grails')),
             new Skill(new Tag('http://en.wikipedia.org/wiki/Zend_Framework', 'Zend Framework')),
-            new Skill(new Tag('http://en.wikipedia.org/wiki/Symfony', 'Symfony 2')),
+            new Skill(new Tag('http://en.wikipedia.org/wiki/Symfony', 'Symfony')),
             new Skill(new Tag('http://en.wikipedia.org/wiki/Drupal', 'Drupal')),
         ]
     ),
@@ -378,6 +395,7 @@ $skills = [
         'Hardware\\Virtualization / Containers',
         [
             new Skill(new Tag("http://en.wikipedia.org/wiki/Docker_(software)", "Docker")),
+            new Skill(new Tag("http://en.wikipedia.org/wiki/Kubernetes", "Kubernetes")),
             new Skill(new Tag("http://en.wikipedia.org/wiki/OpenVZ", "OpenVZ")),
             new Skill(new Tag("http://en.wikipedia.org/wiki/VirtualBox", "VirtualBox")),
             new Skill(new Tag("http://en.wikipedia.org/wiki/Xen", "Xen"))
