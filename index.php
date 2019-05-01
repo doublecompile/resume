@@ -31,19 +31,30 @@ $experience = [
         )->build()
     ,
     JobBuilder::get()->company('Mindgrub Technologies')
-        ->title('Lead Managed Services Engineer')
+        ->title('Director of Managed Services')
         ->address('Baltimore', 'MD', 'US')
         ->dates('2017-04-17', $present)
         ->description(
-            "Influences company policy and processes based on knowledge and experience.",
-            "Serves as a DevOps engineer.",
-            "* Front-end web development using HTML, CSS, and JavaScript. Implementation and testing of mobile-first responsive design using smartphone, tablet, and desktop devices.",
+            "Serves as an engineering director, supervising a department and its members.",
+            "* Makes or influences company policy and processes based on knowledge and experience.",
+            "* Conducts hiring interviews.",
+            "* Delivers presentations at speaking engagements.",
+            "* Crafts requirements, helps plan allocations, and distributes workload.",
+            "* Aids in mentorship, code reviews, and problem-solving.",
+            "Serves as a solution architect and DevOps engineer.",
+            "* Design, configuration, and maintenance of Amazon Web Services infrastructure; Integrated with EC2, S3, RDS, SES, ElastiCache, Route 53, CloudFront. Leveraged CodeDeploy in production and staging delivery systems.",
+            "* Design, configuration, and maintenance of Google Cloud Platform infrastructure; Integrated with Compute Engine, Cloud SQL, Cloud Storage, GKE.",
+            "* Leveraged Kubernetes and Amazon ECS for container orchestration.",
+            "* Created Docker container images.",
+            "* Created GitLab continuous integration scripts.",
+            "* Developed automation scripts using Bash.",
+            "Serves as a software engineer and web developer for various clients.",
+            "* Design and development of web applications and APIs using PHP, Node.js, and Python.",
+            "* Maintenance of legacy Java and C# systems",
+            "* Front-end web development using HTML, CSS, and JavaScript (jQuery, Angular, React). Implementation and testing of mobile-first responsive design using smartphone, tablet, and desktop devices.",
             "* Installed, configured, and maintained Drupal and WordPress CMS products.",
             "* Custom Drupal module development.",
-            "* Created Docker container images.",
-            "* Leveraged Kubernetes and Amazon ECS for container orchestration.",
-            "* Design and configuration of Amazon Web Services infrastructure; EC2 Linux servers; Integrated with S3, RDS, SES, ElastiCache.",
-            "* Design and development of web applications and automated scripts using PHP and Bash."
+            "* Custom WordPress plugin development."
         )->build()
     ,
     JobBuilder::get()->company('Quevera')
@@ -51,7 +62,7 @@ $experience = [
         ->address('Columbia', 'MD', 'US')
         ->dates('2015-05-01', '2017-04-12')
         ->description(
-            "Made or influenced company technical decisions based on knowledge and experience.",
+            "Made or influenced company technical decisions based on knowledge and experience. Conducted hiring interviews.",
             "Served as a software engineer, systems designer, database administrator, software configuration manager, and system administrator of a Software-as-a-Service product.",
             "* Design and development of PHP/Hack web application product using HHVM and XHP. Design and development of REST API.",
             "* Front-end web development using HTML, CSS, and Dojo Toolkit. Implementation and testing of mobile-first responsive design using smartphone, tablet, and desktop devices.",
@@ -240,6 +251,7 @@ $skills = [
                 ->dates('1999-09-01', '2000-06-01')
                 ->dates('2001-01-01', '2001-07-01')
                 ->dates('2008-08-01', '2014-12-26')
+                ->dates('2018-09-01', '2018-12-01')
                 ->build()
             ,
             SkillBuilder::get()->name('Groovy', 'https://en.wikipedia.org/wiki/Groovy%20(programming%20language)')
@@ -272,6 +284,7 @@ $skills = [
             SkillBuilder::get()->name('ASP.NET / C#', 'https://en.wikipedia.org/wiki/C%20Sharp%20(programming%20language)')
                 ->rating(2)
                 ->dates('2004-01-01', '2006-01-01')
+                ->dates('2017-06-01', '2017-08-01')
                 ->build()
             ,
         ]
@@ -286,6 +299,7 @@ $skills = [
             new Skill(new Tag('http://en.wikipedia.org/wiki/Zend_Framework', 'Zend Framework')),
             new Skill(new Tag('http://en.wikipedia.org/wiki/Symfony', 'Symfony')),
             new Skill(new Tag('http://en.wikipedia.org/wiki/Drupal', 'Drupal')),
+            new Skill(new Tag('http://en.wikipedia.org/wiki/Laravel', 'Laravel')),
         ]
     ),
     new SkillHeading(
@@ -342,6 +356,7 @@ $skills = [
         'Development\\Build Tools',
         [
             new Skill(new Tag("https://en.wikipedia.org/wiki/Composer_%28software%29", 'Composer')),
+            new Skill(new Tag("https://en.wikipedia.org/wiki/Gulp.js", 'Gulp')),
             new Skill(new Tag("https://en.wikipedia.org/wiki/Broccoli_%28build_tool%29", 'Broccoli')),
             new Skill(new Tag("http://en.wikipedia.org/wiki/Jenkins_%28software%29", 'Jenkins')),
             new Skill(new Tag("http://en.wikipedia.org/wiki/Apache Maven", 'Maven')),
@@ -373,7 +388,8 @@ $skills = [
         'Databases\\NoSQL',
         [
             new Skill(new Tag("http://en.wikipedia.org/wiki/MongoDB", 'MongoDB')),
-            new Skill(new Tag("http://en.wikipedia.org/wiki/Memcached", 'Memcached'))
+            new Skill(new Tag("http://en.wikipedia.org/wiki/Memcached", 'Memcached')),
+            new Skill(new Tag("http://en.wikipedia.org/wiki/Redis", 'Redis'))
         ]
     ),
     new SkillHeading(
@@ -389,6 +405,7 @@ $skills = [
             new Skill('EC2'), new Skill('ECS'), new Skill('S3'), new Skill('RDS'),
             new Skill('ElastiCache'), new Skill('VPC'), new Skill('Route 53'),
             new Skill('KMS'), new Skill('SES'), new Skill('CodeDeploy'),
+            new Skill('CloudFront'),
         ]
     ),
     new SkillHeading(
@@ -551,6 +568,13 @@ $cw = new Doublecompile\Resume\CardWriter();
 							</dl>
 						</div>
 					</section>
+
+                    <section id="certifications">
+                        <h2>Certifications</h2>
+                        <ol>
+                            <li>AWS Certified Solutions Architect – Associate</li>
+                        </ol>
+                    </section>
 
 					<!-- ?education=1 to see education -->
 					<?php if (isset($_GET['education'])): ?>
