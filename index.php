@@ -573,6 +573,7 @@ $cw = new Doublecompile\Resume\CardWriter();
                         <h2>Certifications</h2>
                         <ol>
                             <li>AWS Certified Solutions Architect – Associate</li>
+                            <li>AWS Certified Solutions Architect – Professional</li>
                         </ol>
                     </section>
 
